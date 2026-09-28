@@ -1,0 +1,330 @@
+/* ==========================================================================
+   ESTILOS GERAIS - TEMA NEUTRO FORMAL
+   ========================================================================== */
+
+:root {
+  /* 1. Cores de Fundo e Superfícies (Neutras e Formais) */
+  --bg-page: #f8fafc;        /* Fundo geral da página (slate muito claro) */
+  --bg-card: #ffffff;        /* Fundo dos cartões e secções (branco puro) */
+  --bg-subtle: #f1f5f9;      /* Fundo suave para detalhes e badges */
+  --bg-hover: #e2e8f0;       /* Cor de fundo para estados de hover */
+
+  /* 2. Cores de Texto e Contrastes */
+  --text-main: #0f172a;      /* Texto principal / Títulos (slate escuro/formal) */
+  --text-body: #334155;      /* Texto de corpo (slate médio legível) */
+  --text-muted: #64748b;     /* Texto secundário / notas */
+
+  /* 3. Cores de Ligações e Destaques */
+  --color-primary: #1d4ed8;  /* Azul formal institucional para ligações */
+  --color-primary-hover: #1e40af; /* Azul escuro no hover */
+  --color-accent: #2563eb;   /* Acento formal */
+  --color-border: #e2e8f0;   /* Bordas discretas */
+
+  /* 4. Tipos de Letra (Tipografia) */
+  --font-heading: 'Outfit', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* 5. Espaçamentos (Margens e Paddings) */
+  --spacing-xs: 0.25rem;     /* 4px */
+  --spacing-sm: 0.5rem;      /* 8px */
+  --spacing-md: 1rem;        /* 16px */
+  --spacing-lg: 1.5rem;      /* 24px */
+  --spacing-xl: 2rem;        /* 32px */
+  --spacing-2xl: 3rem;       /* 48px */
+
+  /* 6. Estrutura e Bordas */
+  --container-width: 820px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+}
+
+/* ==========================================================================
+   RESET BÁSICO & CONFIGURAÇÃO DA PÁGINA
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Tipo de letra base */
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 400;
+
+  /* Cor de fundo neutra */
+  background-color: var(--bg-page);
+  color: var(--text-body);
+
+  /* Margem e espaçamento da página */
+  min-height: 100vh;
+  padding: var(--spacing-2xl) var(--spacing-md);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   CONTAINER & ESTRUTURA DE ESPAÇAMENTO
+   ========================================================================== */
+
+.container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* ==========================================================================
+   ESTILO PARA TÍTULOS (H1, H2, H3)
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+/* Título Principal (H1) */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-main);
+}
+
+/* Subtítulos / Títulos de Secção (H2) */
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* Destaque formal subtil para H2 */
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1.25em;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Títulos de Terceiro Nível (H3) */
+h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ==========================================================================
+   ESTILO PARA LIGAÇÕES (LINKS / <a>)
+   ========================================================================== */
+
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, background-color 0.2s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+  text-decoration-color: var(--color-primary-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+a:active {
+  color: #1e3a8a;
+}
+
+/* ==========================================================================
+   SECTOR DO CABEÇALHO (HEADER)
+   ========================================================================== */
+
+.page-intro {
+  text-align: left;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL E CARTÕES (CARDS)
+   ========================================================================== */
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Cartões formais com fundo limpo e sombra suave */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-body);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.info-link {
+  font-size: 0.95rem;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--bg-subtle);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* ==========================================================================
+   LISTA DE APRENDIZADOS / TÓPICOS
+   ========================================================================== */
+
+.topics-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--spacing-sm) var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.topics-grid li {
+  position: relative;
+  padding: var(--spacing-sm) var(--spacing-md);
+  padding-left: 1.75rem;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.925rem;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.topics-grid li:hover {
+  background-color: var(--bg-card);
+  border-color: #cbd5e1;
+}
+
+/* Marcador subtil e formal */
+.topics-grid li::before {
+  content: "•";
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+
+.page-outro {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-outro p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  body {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+}

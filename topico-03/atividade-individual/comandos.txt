@@ -1,0 +1,6 @@
+sudo apt install tree instalação do tree permite criar estrutura de pastas
+mkdir
+nano
+mv mover pastas ou renomiar
+
+

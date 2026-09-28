@@ -1,0 +1,51 @@
+# Ambiente de trabalho
+
+## Tipo de ambiente
+VM local / VPS 
+
+## Sistema utilizado
+Windows 11
+
+## Recursos disponíveis
+CPU:
+
+	AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx 
+
+	Velocidade base:	2,10 GHz
+	Sockets:	1
+	Núcleos:	4
+	Processadores lógicos:	8
+	Virtualização:	Ativado
+	Cache L1:	384 KB
+	Cache L2:	2,0 MB
+	Cache L3:	4,0 MB
+
+	Utilização	8%
+	Velocidade	1,43 GHz
+	Tempo ativo	1:02:32:47
+	Processos	268
+	Threads	4223
+	Identificadores	134020
+
+
+RAM: 8,00 GB (6,94 GB utilizável)
+Disco:
+
+	SAMSUNG MZVLB256HBHQ-00000
+
+	Capacidade:	239 GB
+	Formatado:	119 GB
+	Disco de sistema:	Sim
+	Ficheiro de paginação:	Sim
+	Tipo:	SSD
+
+	Velocidade de leitura	913 KB/s
+	Velocidade de escrita	0 KB/s
+	Tempo ativo	2%
+	Tempo de resposta médio	0,8 ms
+
+
+
+## Limitações
+
+## Observações

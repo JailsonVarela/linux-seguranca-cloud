@@ -1,0 +1,6 @@
+touch criar ficheiros
+mkdir cria diretórios
+whoami mostra o usuario atual
+id mostra o id do usuario, grupos (+++)
+groups mostra os grupos do sistema
+chmod atribui permissoes de acesso
